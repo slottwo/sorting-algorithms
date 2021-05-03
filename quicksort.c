@@ -18,14 +18,14 @@ int split (int *arr, int low, int high)
 	int left_wall = low;
 
 	for (i = low; i < high; ++i)
-
+	{
 		if (arr[i] <= pivot) {
 			swap = arr[i];
 			arr[i] = arr[left_wall];
 			arr[left_wall] = swap;
 			++left_wall;
 		}
-
+	}
 	swap = arr[i];
 	arr[i] = arr[left_wall];
 	arr[left_wall] = swap;
